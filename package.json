@@ -5,8 +5,11 @@
   "main": "index.js",
   "dependencies": {
     "@aws-sdk/client-comprehend": "^3.316.0",
+    "@aws-sdk/client-kinesis": "^3.316.0",
     "aws-sdk": "^2.1363.0",
-    "twitter": "^1.1.0"
+    "needle": "^3.2.0",
+    "twitter": "^1.7.1",
+    "twitter-api-v2": "^1.14.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
