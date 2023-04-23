@@ -1,6 +1,14 @@
-const AWS = require('aws-sdk');
-const docClient = new AWS.DynamoDB.DocumentClient();
-const comprehend = new AWS.Comprehend();
+const {
+        Comprehend
+      } = require("@aws-sdk/client-comprehend"),
+      {
+        DynamoDBDocument
+      } = require("@aws-sdk/lib-dynamodb"),
+      {
+        DynamoDB
+      } = require("@aws-sdk/client-dynamodb");
+const docClient = DynamoDBDocument.from(new DynamoDB());
+const comprehend = new Comprehend();
 
 exports.handler = (event, context, callback) => {
 

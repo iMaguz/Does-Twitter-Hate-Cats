@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@aws-sdk/client-comprehend": "^3.316.0",
     "aws-sdk": "^2.1363.0",
     "twitter": "^1.1.0"
   },

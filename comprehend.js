@@ -1,8 +1,11 @@
-var AWS = require('aws-sdk');
+var AWS = require('aws-sdk'),
+    {
+       Comprehend
+    } = require("@aws-sdk/client-comprehend");
  
 AWS.config.loadFromPath('./config.json');
 
-var comprehend = new AWS.Comprehend();
+var comprehend = new Comprehend();
 
 var params = {
     LanguageCode: 'en',

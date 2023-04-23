@@ -1,9 +1,12 @@
 var Twitter = require('twitter');
-var AWS = require('aws-sdk');
+var AWS = require('aws-sdk'),
+    {
+        Kinesis
+    } = require("@aws-sdk/client-kinesis");
 
 AWS.config.loadFromPath('./config.json');
 
-var kinesis = new AWS.Kinesis();
+var kinesis = new Kinesis();
 
 var client = new Twitter({
     consumer_key: "twitter consumer key here",

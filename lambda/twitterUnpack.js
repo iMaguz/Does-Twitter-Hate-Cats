@@ -1,6 +1,14 @@
-const AWS = require('aws-sdk');
-const s3 = new AWS.S3();
-const docClient = new AWS.DynamoDB.DocumentClient();
+const {
+          DynamoDBDocument
+      } = require("@aws-sdk/lib-dynamodb"),
+      {
+          DynamoDB
+      } = require("@aws-sdk/client-dynamodb"),
+      {
+          S3
+      } = require("@aws-sdk/client-s3");
+const s3 = new S3();
+const docClient = DynamoDBDocument.from(new DynamoDB());
 
 exports.handler = (event, context, callback) => {
 
